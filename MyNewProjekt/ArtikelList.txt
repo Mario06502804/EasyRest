@@ -1,4 +1,4 @@
-﻿Artikel ertsellung 
+Artikel ertsellung 
 
 "Vorspeisen"
 
@@ -56,17 +56,17 @@
 
 60 Pommes Frites    5,50€
 61 Kartoffelpüree   4,50€
-62 Reis 	        4,50€
-63 Nudeln 		    4,50€
-64 Gemüse 			5,50€
+62 Reis 	          4,50€
+63 Nudeln 		      4,50€
+64 Gemüse 			    5,50€
 
 "Nachspeisen"
 
-70 Apfelstrudel		   6,50€
-71 Creme Brulee		   9,50€
+70 Apfelstrudel		     6,50€
+71 Creme Brulee		     9,50€
 72 mousse au Chocolat  8,50€
-73 Tiramisu		       7,50€
-74 Panna Cotta		   6,50€
+73 Tiramisu		         7,50€
+74 Panna Cotta		     6,50€
 
 
 "Getränke"
@@ -98,17 +98,14 @@
 
 "Mineralwasser"
 
-130 Sprudelwasser 0,5l 2,50€
-131 Sprudelwasser 1l   3,50€
-132 Stillwasser 0,5l   2,50€
-133 Stillwasser 1l     3,50€
+130 Sprudelwasser   0,5l 2,50€
+131 Sprudelwasser     1l 3,50€
+132 Stillwasser     0,5l 2,50€
+133 Stillwasser       1l 3,50€
 
 "Saft"
 
-140 Apfelsaft 0,33l        2,90€
-141 Orangensaft 0,33l      2,90€
-142 Traubensaft 0,33l      2,90€
-143 Multivitaminsaft 0,33l 2,90€
-
-
-"
+140 Apfelsaft         0,33l 2,90€
+141 Orangensaft       0,33l 2,90€
+142 Traubensaft       0,33l 2,90€
+143 Multivitaminsaft  0,33l 2,90€
