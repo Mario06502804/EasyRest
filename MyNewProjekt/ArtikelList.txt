@@ -1,0 +1,114 @@
+﻿Artikel ertsellung 
+
+"Vorspeisen"
+
+"Salate" 
+
+10 Gemichter Salat   6,50€
+11 Rohkost Salat     5,50€
+12 Tomatensalat      5,50€
+13 Gurkensalat       5,50€
+14 Blattsalat        5,50€
+15 Karottensalat     5,50€
+16 Kartoffelsalat    7,50€
+
+"Suppen"
+
+20 Gemüsesuppe       6,50€
+21 Hühnersuppe       6,50€
+22 Rindfleischsuppe  7,50€
+23 Fischsuppe        8,50€
+24 Kürbissuppe       6,50€
+25 Tomatensuppe      6,50€	
+
+"Hauptgerichte"
+
+"Fleischgerichte"
+
+30 Rindersteak       28,50€
+31 Schweinebraten    24,50€
+32 Hähnchenbrust     23,50€
+33 Lammkotelett      28,50€
+34 Kalbsschnitzel    28,50€
+35 Hackbraten        25,50€
+36 Rinderroulade     26,50€
+37 Schweinefilet     26,50€
+
+"Fischgerichte"
+
+40 Lachsfilet       27,50€
+41 Forelle          26,50€
+42 Kabeljau         25,50€
+43 Scholle          24,50€
+44 Thunfisch        23,50€
+45 Garnelen         29,50€
+
+
+"Vegetarische Gerichte"
+
+50 Gemüseauflauf   16,50€
+51 Spinatlasagne   15,50€
+52 Ratatouille     12,50€
+53 Gemüsecurry     14,50€
+
+
+"Beilagen"
+
+60 Pommes Frites    5,50€
+61 Kartoffelpüree   4,50€
+62 Reis 	        4,50€
+63 Nudeln 		    4,50€
+64 Gemüse 			5,50€
+
+"Nachspeisen"
+
+70 Apfelstrudel		   6,50€
+71 Creme Brulee		   9,50€
+72 mousse au Chocolat  8,50€
+73 Tiramisu		       7,50€
+74 Panna Cotta		   6,50€
+
+
+"Getränke"
+
+"alcoholische Getränke"
+
+"Bier"
+
+100 Pils             0,3l	3,50€
+101 Weizenbier       0,5l	3,50€
+102 Naturtrübes Bier 0,3l	3,50€
+103 Dunkel           0,3l	3,50€
+
+"Wein"
+
+110 Rotwein  0,1l	4,20€
+111 Weißwein 0,1l	4,20€
+112 Roséwein 0,1l	4,20€
+113 Sekt     0,1l	4,20€
+
+
+"alkoholfreie Getränke"
+
+"Softdrinks"
+
+120 Cola     2,90€
+121 Fanta    2,90€
+122 Sprite   2,90€
+
+"Mineralwasser"
+
+130 Sprudelwasser 0,5l 2,50€
+131 Sprudelwasser 1l   3,50€
+132 Stillwasser 0,5l   2,50€
+133 Stillwasser 1l     3,50€
+
+"Saft"
+
+140 Apfelsaft 0,33l        2,90€
+141 Orangensaft 0,33l      2,90€
+142 Traubensaft 0,33l      2,90€
+143 Multivitaminsaft 0,33l 2,90€
+
+
+"

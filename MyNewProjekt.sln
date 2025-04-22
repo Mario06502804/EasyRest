@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestWork", "MyNewProjekt\RestWork.csproj", "{A9DB35DF-09D4-40F8-9BC6-A1A6F8EC0270}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9DB35DF-09D4-40F8-9BC6-A1A6F8EC0270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DB35DF-09D4-40F8-9BC6-A1A6F8EC0270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DB35DF-09D4-40F8-9BC6-A1A6F8EC0270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DB35DF-09D4-40F8-9BC6-A1A6F8EC0270}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40313A31-724C-4F4A-A5E4-3CD048F5C6F7}
+	EndGlobalSection
+EndGlobal
