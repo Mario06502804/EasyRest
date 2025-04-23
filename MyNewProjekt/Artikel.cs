@@ -2,11 +2,11 @@
 {
     public class Artikel
     {
-        public int Plu { get; set; } // Artikelnummer
-        public string Name { get; set; } // Artikelname
-        public decimal Preis { get; set; } // Preis in Euro
+        public string Plu { get; }
+        public string Name { get; }
+        public decimal Preis { get; }
 
-        public Artikel(int plu, string name, decimal preis) // Konstruktor für die artikel
+        public Artikel(string plu, string name, decimal preis) // Konstruktor
         {
             Plu = plu;
             Name = name;
@@ -15,7 +15,7 @@
 
         public override string ToString()  // Ausgabe der Artikelinformationen (Quelle chatGPT)
         {
-            return $"PLU: {Plu}, Name: {Name}, Preis: {Preis:C}";
+            return $"(PLU: {Plu})\nName: {Name}\nPreis: {Preis:C}";
         }
     }
 }

@@ -29,10 +29,12 @@
             string result = $"Bestellung vom {Zeitpunkt}:\n";
             foreach (var artikel in ArtikelListe)
             {
-                result += $"- {artikel}\n";
+                result += $"\n * {artikel}\n";
             }
-            result += $"Gesamt: {Gesamtpreis():C}\n";
+            result += $"\nGesamt: {Gesamtpreis():C}\n";
             return result;
         }
     }
 }
+
+
