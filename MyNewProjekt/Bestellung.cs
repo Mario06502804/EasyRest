@@ -2,8 +2,37 @@
 {
     public class Bestellung
     {
-        public int TischNummer { get; set; }
-        public List<Artikel> ArtikelListe { get; set; } = new List<Artikel>();
-        
+        public DateTime Zeitpunkt { get; set; }               // Zeitpunkt der Bestellung
+        public List<Artikel> ArtikelListe { get; set; }       // Artikel in der Bestellung
+
+        public Bestellung()  // quelle von chatgpt DateTime.Now
+        {
+            Zeitpunkt = DateTime.Now;
+            ArtikelListe = new List<Artikel>();
+        }
+
+        // Artikel zur Bestellung hinzufügen
+        public void ArtikelHinzufuegen(Artikel artikel)
+        {
+            ArtikelListe.Add(artikel);
+        }
+
+        // Gesamtsumme der Bestellung berechnen
+        public decimal Gesamtpreis()
+        {
+            return ArtikelListe.Sum(a => a.Preis);
+        }
+
+        // Textausgabe der Bestellung
+        public override string ToString()
+        {
+            string result = $"Bestellung vom {Zeitpunkt}:\n";
+            foreach (var artikel in ArtikelListe)
+            {
+                result += $"- {artikel}\n";
+            }
+            result += $"Gesamt: {Gesamtpreis():C}\n";
+            return result;
+        }
     }
 }

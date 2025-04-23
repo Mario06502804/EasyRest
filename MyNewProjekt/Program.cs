@@ -1,43 +1,78 @@
 ﻿using MyNewProject;
 
 bool Start = true;
-while (Start)
+while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
 {
- Console.Clear();
- Console.WriteLine("Willkommen in RestWork !!\n");
- Console.WriteLine("Bestellung Aufnehmen (1)");
- Console.WriteLine("Tisch Anzeigen       (2)");
- Console.WriteLine("Beenden              (0)");
- Console.Write("\nAuswahl:");
- 
- string? eingabe = Console.ReadLine();
+    Console.Clear();
+    Console.WriteLine("'Kellner Modus'");
+    Console.WriteLine("Willkommen in RestWork !!\n");
+    Console.WriteLine("Bestellung Aufnehmen (1)");
+    Console.WriteLine("Tisch Anzeigen       (2)");
+    Console.WriteLine("Beenden              (0)");
+    Console.Write("\nAuswahl:");
 
- switch(eingabe)
- {
-    case "1":
-    Console.WriteLine("Tischnummer:");
-        if (int.TryParse(Console.ReadLine(),out int TischNr)) // (out int speichert die eingabe in TischNr)
-         {
-            
-            Console.Write("PLU (Artikelnummer): ");
-            int plu = int.Parse(Console.ReadLine());
+    string? eingabe = Console.ReadLine();
 
-            Console.Write("Artikel Name: ");
-            string name = Console.ReadLine();
+    switch (eingabe)
+    {
+        case "1": // bestellung aufnehmen
+            Console.Write("Tischnummer: ");
+            if (int.TryParse(Console.ReadLine(), out int tischNr))
+            {
+                Bestellung bestellung = new();
+                bool weitereArtikel = true;
 
-            Console.Write("Preis (in Euro): ");
-            decimal preis = decimal.Parse(Console.ReadLine());
-         }
-    break;
-    case "2":
-    System.Console.WriteLine("Tisch Anzeigen");
-        if (int.TryParse(Console.ReadLine(), out int TischAnzeigen))
-        {
-            
-        }
-    break;
-    case "0":
-    Start = false;
-    break;
- }
+                while (weitereArtikel)
+                {
+                    Console.Write("PLU (Artikelnummer): ");
+
+                    if (int.TryParse(Console.ReadLine(), out int plu))
+                    {
+                        Console.WriteLine("Ungültige PLU.");
+                        continue;
+                    }
+
+                    Console.Write("Artikel Name: ");
+                    string? name = Console.ReadLine();
+
+                    Console.Write("Preis (in Euro): ");
+
+                    if (!decimal.TryParse(Console.ReadLine(), out decimal preis))
+                    {
+                        Console.WriteLine("Ungültiger Preis.");
+                        continue;
+                    }
+
+                    Artikel artikel = new(plu, name, preis);
+                    bestellung.ArtikelHinzufuegen(artikel);
+
+                    Console.Write("Weiteren Artikel hinzufügen? (j/n): ");
+                    string? weiter = Console.ReadLine();
+
+                    if (weiter?.ToLower() != "j") weitereArtikel = false;
+                }
+                Verwaltung.FuegeBestellungHinzu(tischNr, bestellung);
+                Console.WriteLine("Bestellung wurde gespeichert!");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Ungültige Tischnummer.");
+                Console.ReadKey();
+            }
+            break;
+
+        case "2":// tisch anzeigen
+            Console.WriteLine("Tisch Anzeigen");
+            if (int.TryParse(Console.ReadLine(), out int tischAnzeigen))
+            {
+                Verwaltung.ZeigeBestellungen(tischAnzeigen);
+            }
+            Console.ReadLine();
+            break;
+
+        case "0": // programm beenden 
+            Start = false;
+            break;
+    }
 }

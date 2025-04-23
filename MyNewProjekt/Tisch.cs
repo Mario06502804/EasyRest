@@ -2,10 +2,28 @@
 {
     public class Tisch
     {
-        // Propertys sind Variablen, die in einer Klasse definiert sind
-        public int TischNr { get; set; } // Tischnummer eingabe
+        public int Nummer { get; set; } // Tischnummer
+        public List<Bestellung> Bestellungen { get; set; } // Liste der Bestellungen für diesen Tisch
 
-        public int TischAnzeigen {get; set;} // Tisch anzeigen
+        public Tisch(int nummer)
+        {
+            Nummer = nummer;
+            Bestellungen = new List<Bestellung>();
+        }
 
+        public void FuegeBestellungHinzu(Bestellung bestellung) // Bestellung zu einem Tisch hinzufügen
+        {
+            Bestellungen.Add(bestellung);
+        }
+
+        public override string ToString() // Textausgabe der Bestellungen für diesen Tisch
+        {
+            string result = $"Tisch {Nummer}:\n";
+            foreach (var bestellung in Bestellungen)
+            {
+                result += bestellung.ToString() + "\n";
+            }
+            return result;
+        }
     }
 }
