@@ -2,9 +2,9 @@
 {
     public class Artikel
     {
-        public string Plu { get; }
-        public string Name { get; }
-        public decimal Preis { get; }
+        public string Plu { get; set; }
+        public string Name { get; set; }
+        public decimal Preis { get; set; }
 
         public Artikel(string plu, string name, decimal preis) // Konstruktor
         {
@@ -15,7 +15,7 @@
 
         public override string ToString()  // Ausgabe der Artikelinformationen (Quelle chatGPT)
         {
-            return $"(PLU: {Plu})\nName: {Name}\nPreis: {Preis:C}";
+            return $"Plu: {Plu}\nName: {Name}\nPreis: {Preis:C}";
         }
     }
 }

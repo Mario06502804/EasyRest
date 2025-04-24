@@ -4,8 +4,12 @@ Console.OutputEncoding = System.Text.Encoding.UTF8; // damit zeigt es den Euro z
 bool Start = true;// Startvariable für das Hauptmenü
 while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
 {
-    Console.Clear();// Bildschirm löschen
-    Console.WriteLine("'Kellner Modus' -- Willkommen in RestWork !!");
+    Console.Clear();
+
+    Console.BackgroundColor = ConsoleColor.Blue;
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("'Kellner Modus' -- Willkommen in EasyRest !!");
+    Console.ResetColor();
     Console.WriteLine("\n");
     Console.WriteLine("Bestellung Aufnehmen (1)");
     Console.WriteLine("Tisch Anzeigen       (2)");
@@ -14,14 +18,22 @@ while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
 
     string? eingabe = Console.ReadLine();
 
-    switch (eingabe)// Eingabe des Benutzers
+    switch (eingabe)
     {
-        case "1": // bestellung aufnehmen
+        case "1": // mit case 1 - bestellung aufnehmen
             Console.Write("Tischnummer: ");
 
             if (int.TryParse(Console.ReadLine(), out int tischNr))
             {
-                Bestellung bestellung = new();
+                Bestellung bestellung;
+                if (Verwaltung.HatBestellung(tischNr))
+                {
+                    bestellung = Verwaltung.HoleBestellung(tischNr); // alte Bestellung holen
+                }
+                else
+                {
+                    bestellung = new Bestellung(); // neue anlegen
+                }
                 bool weitereArtikel = true;// Variable für weitere Artikel(neues artikel) 
 
                 while (weitereArtikel)// Schleife für weitere Artikel
@@ -43,10 +55,13 @@ while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
                             if (plu == gesucht[0])
                             {
                                 Console.WriteLine(line);
-                                // Artikel erstellen und zur Bestellung hinzufügen
-                                Artikel artikel = new(plu, Name, Preis);
+                                Name = gesucht[1];
+                                Preis = decimal.Parse(gesucht[gesucht.Length - 2]);
+                                Artikel artikel = new(plu, Name, Preis); // Artikel erstellen und zur Bestellung hinzufügen
                                 bestellung.ArtikelHinzufuegen(artikel);
+                                Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine($"\nArtikel wurde zur Bestellung hinzugefügt.");
+                                Console.ResetColor();
                                 break;// Wenn der Artikel gefunden wird, wird die Schleife abgebrochen
                             }
                         }
@@ -57,26 +72,31 @@ while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
                     if (weiter?.ToLower() != "j") weitereArtikel = false;
                 }
                 Verwaltung.FuegeBestellungHinzu(tischNr, bestellung);
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Bestellung wurde gespeichert!");
-                Console.ReadKey();
+                Console.ResetColor();
+                Console.WriteLine("Drücke Enter, um zum Hauptmenü zurückzukehren...");
+                Console.ReadLine();
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Ungültige Tischnummer.");
+                Console.ResetColor();
                 Console.ReadKey();
             }
             break;
 
-        case "2":// tisch anzeigen
+        case "2":// mit case 2 tisch anzeigen (Ausgabe)  
 
             Console.WriteLine("Tisch Anzeigen");
             Console.Write("Tischnummer: ");
 
-            if (int.TryParse(Console.ReadLine(), out int tischAnzeigen))
+            if (int.TryParse(Console.ReadLine(), out int tischAnzeigen)) // eingabe als ganzzahl parsen 
             {
-                Verwaltung.ZeigeBestellungen(tischAnzeigen);
+                Verwaltung.ZeigeBestellungen(tischAnzeigen);// wenn parsen erfolreich ist kommt die methode ZeigeBestellung
             }
-            Console.ReadLine();
+            Console.ReadLine(); // eigabe befor das programm endet
             break;
 
         case "0": // programm beenden 
