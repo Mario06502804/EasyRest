@@ -1,12 +1,13 @@
 ﻿using MyNewProject;
-Console.OutputEncoding = System.Text.Encoding.UTF8; // damit zeigt es den Euro zeichen an $$$
+Console.OutputEncoding = System.Text.Encoding.UTF8; // damit zeigt es den Euro zeichen an $$$ (KI)
 
-bool Start = true;// Startvariable für das Hauptmenü
+//Hauptmenü Schleife
+bool Start = true;// Startvariable für das Hauptmenü auf war
 while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
 {
+    //Menü Anzeige
     Console.Clear();
-
-    Console.BackgroundColor = ConsoleColor.Blue;
+    Console.BackgroundColor = ConsoleColor.Green;
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("'Kellner Modus' -- Willkommen in EasyRest !!");
     Console.ResetColor();
@@ -14,29 +15,32 @@ while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
     Console.WriteLine("Bestellung Aufnehmen (1)");
     Console.WriteLine("Tisch Anzeigen       (2)");
     Console.WriteLine("Beenden              (0)");
-    Console.Write("\nAuswahl: ");
+    Console.WriteLine();
+    Console.Write("Auswahl: ");
 
     string? eingabe = Console.ReadLine();
 
     switch (eingabe)
     {
-        case "1": // mit case 1 - bestellung aufnehmen
+        case "1": // bestellung aufnehmen
             Console.Write("Tischnummer: ");
 
             if (int.TryParse(Console.ReadLine(), out int tischNr))
             {
                 Bestellung bestellung;
+                // Bestehende Bestellung laden oder neue anlegen
                 if (Verwaltung.HatBestellung(tischNr))
                 {
-                    bestellung = Verwaltung.HoleBestellung(tischNr); // alte Bestellung holen
+                    bestellung = Verwaltung.HoleBestellung(tischNr);
                 }
                 else
                 {
-                    bestellung = new Bestellung(); // neue anlegen
+                    bestellung = new Bestellung();
                 }
-                bool weitereArtikel = true;// Variable für weitere Artikel(neues artikel) 
+                bool weitereArtikel = true;
 
-                while (weitereArtikel)// Schleife für weitere Artikel
+                // Schleife für weitere Artikel
+                while (weitereArtikel)
                 {
                     Console.WriteLine("\nArtikel hinzufügen");
                     Console.WriteLine("Bitte PLU (Artikelnummer) eingeben: ");
@@ -87,7 +91,7 @@ while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
             }
             break;
 
-        case "2":// mit case 2 tisch anzeigen (Ausgabe)  
+        case "2":// Tisch anzeigen (Ausgabe)  
 
             Console.WriteLine("Tisch Anzeigen");
             Console.Write("Tischnummer: ");
@@ -96,7 +100,7 @@ while (Start) // Hauptmenü wiederholen bis der Benutzer "0" eingibt
             {
                 Verwaltung.ZeigeBestellungen(tischAnzeigen);// wenn parsen erfolreich ist kommt die methode ZeigeBestellung
             }
-            Console.ReadLine(); // eigabe befor das programm endet
+            Console.ReadLine(); // eingabe befor das programm endet (ENTER)
             break;
 
         case "0": // programm beenden 

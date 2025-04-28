@@ -3,25 +3,25 @@ EasyRest ist ein einfaches Kassensystem für Kellner, bei dem bestellungen aufge
 
 Funktionen
 
-- Artikel aufnehmen mit PLU, Name und Preis.
-- Tische abrufen 
-- Alle Bestellungen anzeigen ( Tisch wählen)
-- Rechnung anzeigen ink. Mwst.
-- Solange das program Geöfnet ist speichert es.
+- Aufnahme von Artikeln per PLU (Artikelnummer), Name und Preis
+- Zuordnung von Bestellungen zu Tischen
+- Anzeige aller Bestellungen für einen bestimmten Tisch
+- Rechnungsausgabe inkl. MwSt.
+- Temporäre Speicherung während der Programmlaufzeit
 
 Projektstruktur 
 
-- Program.cs
-- Artikel.cs
-- Bestellung.cs
-- Tisch.cs
-- Verwaltung.cs
-- ArtikelList.txt
-- README.md
+- `Program.cs` – Hauptmenü und Programmablauf
+- `Artikel.cs` – Modell für einzelne Artikel
+- `Bestellung.cs` – Logik für Bestellungen pro Tisch
+- `Tisch.cs` – Modell zur Verwaltung der Tischnummern
+- `Verwaltung.cs` – zentrale Verwaltungslogik
+- `ArtikelList.txt` – Artikeldatenbank mit PLU, Name und Preis
+- `README.md` – Projektdokumentation
 
 Mögliche erweiterungen
 
-- zusammenfassung von gleiche artikel bei ausgabe 
+- gruppierung von gleiche artikel bei Bestellunganzeige 
 - Grafische Benutzeroberfläche (Gui) mit WPF ode WindowsForms 
 - Speicher möglichkeiten mit JSON oder XML damit beim neu start alle daten vorhanden sind die schon gebucht wurden.
 - login für kellner 
@@ -34,4 +34,5 @@ Mögliche erweiterungen
 - Neue Artikel Hinzufügen (Optional da es einfach über die TXT datei geht)
 - Ausgabe für Küche was Speisen sind
 - Ausgabe für Theke was Getränke sind 
+- Artikel Finktionen (z.b. Ohne zwiebel, mit Eis, Ohne Soße.....)
   

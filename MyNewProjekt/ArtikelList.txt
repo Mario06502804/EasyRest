@@ -74,51 +74,51 @@
 
 "Bier"
 
-100 Pils             0,3l   3,50 €
-101 Pils             0,5l   4,80 €
+100 Pils_0,3l               3,50 €
+101 Pils_0,5l               4,80 €
 
-102 Weizenbier       0,3l   3,50 €
-103 WeizenBier       0,5l   4,80 €
+102 Weizenbier_0,3l         3,50 €
+103 WeizenBier_0,5l         4,80 €
 
-104 Naturtrübes_Bier 0,3l   3,50 €
-105 Naturtrübes_Bier 0,5l   4,80 €
+104 Naturtrübes_Bier_0,3l   3,50 €
+105 Naturtrübes_Bier_0,5l   4,80 €
 
-106 Dunkel           0,3l   3,50 €
+106 Dunkel_0,3l             3,50 €
 
 "Wein"
 
-110 Rotwein   0,1l   4,20 €
-111 RotweinTr 0,1l   4,20 €
+110 Rotwein_0,1l     4,20 €
+111 RotweinTr_0,1l   4,20 €
 
-112 Weißwein   0,1l   4,20 €
-113 WeißweinTr 0,1l   4,20 €
+112 Weißwein_0,1l     4,20 €
+113 WeißweinTr_0,1l   4,20 €
 
-114 Roséwein 0,1l   4,20 €
-115 Sekt     0,1l   4,20 €
+114 Roséwein_0,1l   4,20 €
+115 Sekt_0,1l       4,20 €
 
 
 "alkoholfreie Getränke"
 
 "Softdrinks"
 
-120 Cola    0,33l   2,90 €
-121 Fanta   0,33l   2,90 €
-122 Sprite  0,33l   2,90 €
-123 Spezi   0,33l   2,90 €
+120 Cola_0,33l      2,90 €
+121 Fanta_0,33l     2,90 €
+122 Sprite_0,33l    2,90 €
+123 Spezi_0,33l     2,90 €
 
 "Mineralwasser"    
 
-130 Sprudelwasser   0,5l   2,50 €
-131 Sprudelwasser     1l   3,50 €
-132 Stillwasser     0,5l   2,50 €
-133 Stillwasser       1l   3,50 €
+130 Sprudelwasser_0,5l     2,50 €
+131 Sprudelwasser_1l       3,50 €
+132 Stillwasser_0,5l       2,50 €
+133 Stillwasser_1l         3,50 €
 
 "Saft_Pur"
 
-140 Apfelsaft         0,33l   2,90 €
-141 Orangensaft       0,33l   2,90 €
-142 Traubensaft       0,33l   2,90 €
-143 Multivitaminsaft  0,33l   2,90 €
+140 Apfelsaft_0,33l           2,90 €
+141 Orangensaft_0,33l         2,90 €
+142 Traubensaft_0,33l         2,90 €
+143 Multivitaminsaft_0,33l    2,90 €
 
 " Warme Geträmke"
 
