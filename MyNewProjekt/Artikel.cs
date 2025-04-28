@@ -13,7 +13,7 @@
             Preis = preis;
         }
 
-        public override string ToString()  // Ausgabe der Artikelinformationen (Quelle chatGPT)
+        public override string ToString()  // Ausgabe der Artikelinformationen (override - Quelle chatGPT)
         {
             return $"Plu: {Plu}\nName: {Name}\nPreis: {Preis:C}";
         }
