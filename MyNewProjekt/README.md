@@ -1,5 +1,5 @@
 EasyRest – Kellner-Kassensystem (Konsolen-App in C#)
-EasyRest ist ein einfaches Kassensystem für Kellner, bei dem bestellungen aufgenommen werden und Tische verwaltet werden können.
+EasyRest ist ein einfaches Kassensystem für Kellner, bei dem bestellungen aufgenommen werden und Tische Angezeigt werden können.
 
 Funktionen
 
